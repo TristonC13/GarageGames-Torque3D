@@ -50,7 +50,7 @@ inline void safe_delete(T*& ptr) {
 /// @param a Array to delete
 /// @see #safe_delete(), #SAFE_DELETE_OBJECT(), #SAFE_FREE(), #SAFE_FREE_REFERENCE()
 //-----------------------------------------------------------------------------
-#define safe_delete_array(a) { delete [] (a); (a) = NULL; }
+#define SAFE_DELETE_ARRAY(a) { delete [] (a); (a) = NULL; }
 
 template <typename T>
 inline void safe_delete_array(T*& ptr) {
