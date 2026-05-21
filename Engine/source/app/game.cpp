@@ -40,15 +40,11 @@
 #include "console/consoleTypes.h"
 #include "console/engineAPI.h"
 #include "gui/controls/guiMLTextCtrl.h"
-#ifdef TORQUE_TGB_ONLY
-#include "T2D/oldModel/networking/t2dGameConnection.h"
-#include "T2D/oldModel/networking/t2dNetworkServerSceneProcess.h"
-#include "T2D/oldModel/networking/t2dNetworkClientSceneProcess.h"
-#else
+
 #include "T3D/gameBase/gameConnection.h"
 #include "T3D/gameFunctions.h"
 #include "T3D/gameBase/gameProcess.h"
-#endif
+
 #include "platform/profiler.h"
 #include "gfx/gfxCubemap.h"
 #include "gfx/gfxTextureManager.h"

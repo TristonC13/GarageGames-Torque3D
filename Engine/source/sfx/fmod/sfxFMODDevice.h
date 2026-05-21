@@ -44,11 +44,6 @@
    #pragma warning( disable : 4505 )
 #endif
 
-#if defined( TORQUE_OS_XENON ) || defined( TORQUE_OS_PS3 )
-   #define TORQUE_FMOD_STATIC
-   #define TORQUE_FMOD_NO_EVENTS //TEMP
-#endif
-
 
 #include "fmod.h"
 #include "fmod_errors.h"
@@ -59,7 +54,7 @@
 
 
 // This doesn't appear to exist in some contexts, so let's just add it.
-#if defined(TORQUE_OS_WIN) || defined(TORQUE_OS_XENON)
+#if defined(TORQUE_OS_WIN)
 #ifndef WINAPI
 #define WINAPI __stdcall
 #endif

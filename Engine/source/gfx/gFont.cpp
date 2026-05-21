@@ -143,15 +143,6 @@ Resource<GFont> GFont::create(const String &faceName, U32 size, const char *cach
    {
       String fontName;
 
-#ifdef _XBOX
-      //AssertFatal( false, "Font creation is not supported on the Xbox platform. Create the font files (*.uft) using the Windows/MacOS build of the project." );
-      if(!faceName.equal("arial", String::NoCase) || size != 14)
-      {
-         return create("Arial", 14, cacheDirectory, charset);
-      }
-      return ret;
-#endif
-
       // Couldn't load the requested font.  This probably will be common
       // since many unix boxes don't have arial or lucida console installed.
       // Attempt to map the font name into a font we're pretty sure exist

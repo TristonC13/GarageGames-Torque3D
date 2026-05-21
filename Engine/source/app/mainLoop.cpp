@@ -246,7 +246,7 @@ void StandardMainLoop::init()
    NetStringTable::create();
 
    // Use debug output logging on the Xbox and OSX builds
-#if defined( _XBOX ) || defined( TORQUE_OS_MAC )
+#if defined( TORQUE_OS_MAC )
    DebugOutputConsumer::init();
 #endif
 
@@ -363,7 +363,7 @@ void StandardMainLoop::shutdown()
 
    Platform::shutdown();
    
-#if defined( _XBOX ) || defined( TORQUE_OS_MAC )
+#if defined( TORQUE_OS_MAC )
    DebugOutputConsumer::destroy();
 #endif
 
@@ -488,7 +488,7 @@ bool StandardMainLoop::handleCommandLine( S32 argc, const char **argv )
 #endif
          success = str.open(defaultScriptName, Torque::FS::File::Read);
 
-#if defined( TORQUE_DEBUG ) && defined (TORQUE_TOOLS) && !defined(TORQUE_DEDICATED) && !defined( _XBOX )
+#if defined( TORQUE_DEBUG ) && defined (TORQUE_TOOLS) && !defined(TORQUE_DEDICATED)
       if (!success)
       {
          OpenFileDialog ofd;
