@@ -67,10 +67,6 @@
    #include "T3D/gameBase/extended/extendedMove.h"
 #endif
 
-#ifdef TORQUE_OPENVR
-#include "platform/input/openVR/openVRProvider.h"
-#include "platform/input/openVR/openVRTrackedObject.h"
-#endif
 
 // Amount of time if takes to transition to a new action sequence.
 static F32 sAnimationTransitionTime = 0.25f;
@@ -2564,18 +2560,6 @@ void Player::updateMove(const Move* move)
    }
    mDelta.move = *move;
 
-#ifdef TORQUE_OPENVR
-   if (mControllers[0])
-   {
-      mControllers[0]->processTick(move);
-   }
-
-   if (mControllers[1])
-   {
-      mControllers[1]->processTick(move);
-   }
-
-#endif
 
    // Is waterCoverage high enough to be 'swimming'?
    {
@@ -7657,36 +7641,3 @@ void Player::restoreFootfallFX(bool decals, bool sounds, bool dust)
       footfallDustOverride--; 
    noFootfallFX = (footfallDecalOverride > 0 && footfallSoundOverride > 0 && footfallDustOverride > 0);
 }
-#ifdef TORQUE_OPENVR
-void Player::setControllers(Vector<OpenVRTrackedObject*> controllerList)
-{
-   mControllers[0] = controllerList.size() > 0 ? controllerList[0] : NULL;
-   mControllers[1] = controllerList.size() > 1 ? controllerList[1] : NULL;
-}
-
-DefineEngineMethod(Player, setVRControllers, void, (OpenVRTrackedObject* controllerL, OpenVRTrackedObject* controllerR,, "")
-{
-   Vector<OpenVRTrackedObject*> list;
-
-   if (controllerL)
-   {
-      list.push_back(controllerL);
-   }
-   else
-   {
-      list.push_back(NULL);
-   }
-
-   if (controllerR)
-   {
-      list.push_back(controllerR);
-   }
-   else
-   {
-      list.push_back(NULL);
-   }
-
-   object->setControllers(list);
-}
-
-#endif
