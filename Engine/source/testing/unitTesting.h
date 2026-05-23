@@ -23,7 +23,7 @@
 #ifndef _UNIT_TESTING_H_
 #define _UNIT_TESTING_H_
 
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 
 #include <gtest/gtest.h>
 
@@ -38,6 +38,6 @@
    GTEST_TEST_(test_fixture, test_name, test_fixture##Fixture, \
    ::testing::internal::GetTypeId<test_fixture##Fixture>())
 
-#endif // TORQUE_TESTS_ENABLED
+#endif // TORQUE_TESTS
 
 #endif // _UNIT_TESTING_H_

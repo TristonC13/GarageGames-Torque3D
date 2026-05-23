@@ -20,7 +20,7 @@
 // IN THE SOFTWARE.
 //-----------------------------------------------------------------------------
 
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 #include "platform/platform.h" // Allows us to see TORQUE_ENABLE_PROFILER
 
 #ifdef TORQUE_ENABLE_PROFILER

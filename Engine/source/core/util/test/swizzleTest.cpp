@@ -20,7 +20,7 @@
 // IN THE SOFTWARE.
 //-----------------------------------------------------------------------------
 
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 #include "platform/platform.h"
 #include "testing/unitTesting.h"
 #include "core/util/swizzle.h"

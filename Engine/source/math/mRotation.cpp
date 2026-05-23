@@ -24,7 +24,7 @@
 #include "console/engineAPI.h"
 #include "math/mathUtils.h"
 
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 #include "testing/unitTesting.h"
 #endif
 
@@ -318,7 +318,7 @@ void RotationF::normalize()
 }
 
 //Testing
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 TEST(Maths, RotationF_Calculations)
 {
    //TODO: implement unit test

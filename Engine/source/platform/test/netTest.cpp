@@ -20,7 +20,7 @@
 // IN THE SOFTWARE.
 //-----------------------------------------------------------------------------
 
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 #include "testing/unitTesting.h"
 #include "platform/platformNet.h"
 #include "core/util/journal/process.h"

@@ -20,7 +20,7 @@
 // IN THE SOFTWARE.
 //-----------------------------------------------------------------------------
 
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 
 #include "console/engineAPI.h"
 #include "console/consoleInternal.h"
@@ -131,4 +131,4 @@ DefineEngineFunction( runAllUnitTests, int, (const char* testSpecs), (""),
    return result;
 }
 
-#endif // TORQUE_TESTS_ENABLED
+#endif // TORQUE_TESTS

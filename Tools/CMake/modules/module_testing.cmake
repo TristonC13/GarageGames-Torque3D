@@ -20,13 +20,13 @@
 # IN THE SOFTWARE.
 # -----------------------------------------------------------------------------
 
-option(TORQUE_TESTING "Enable unit test module" OFF)
+option(TORQUE_TESTS "Enable unit test module" OFF)
 mark_as_advanced(TORQUE_TESTING)
 
 if(TORQUE_TESTING)
 
     # Project defines
-    addDef( "TORQUE_TESTS_ENABLED" )
+    addDef( "TORQUE_TESTS" )
     addDef( "_VARIADIC_MAX" 10 )
 
     # Add source files

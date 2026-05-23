@@ -1,4 +1,4 @@
-#ifdef TORQUE_TESTS_ENABLED
+#ifdef TORQUE_TESTS
 #include "testing/unitTesting.h"
 #include "platform/platform.h"
 #include "console/simBase.h"

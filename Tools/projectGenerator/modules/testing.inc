@@ -23,7 +23,7 @@
 
 beginModule( 'testing' );
 
-   addProjectDefine( 'TORQUE_TESTS_ENABLED' );
+   addProjectDefine( 'TORQUE_TESTS' );
    addProjectDefine( '_VARIADIC_MAX', 10 );
    addSrcDir(getEngineSrcDir() . 'testing', true);
 
